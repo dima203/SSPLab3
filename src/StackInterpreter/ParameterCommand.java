@@ -1,7 +1,5 @@
 package StackInterpreter;
 
-import java.util.Stack;
-
 public class ParameterCommand implements StackCommand {
     private final String _name;
 

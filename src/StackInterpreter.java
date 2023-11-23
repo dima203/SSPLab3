@@ -9,7 +9,7 @@ public class StackInterpreter {
     private final LinkedList<StackCommand> _commands = new LinkedList<>();
 
     public StackInterpreter() {
-        _context = new Context();
+        this(new Context());
     }
 
     public StackInterpreter(Context context) {
