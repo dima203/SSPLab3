@@ -15,4 +15,8 @@ public class ParameterCommand implements StackCommand {
     }
 
     public String getName() { return _name; }
+
+    public String toString() {
+        return "Parameter(" + _name + ")";
+    }
 }

@@ -7,6 +7,7 @@ import StackInterpreter.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         Context context = new Context();
-
+        StackInterpreter interpreter = new StackInterpreter(context);
+        interpreter.interpret(new FileReader("./stack_program.txt"));
     }
 }

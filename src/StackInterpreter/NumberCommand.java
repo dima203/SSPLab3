@@ -11,4 +11,8 @@ public class NumberCommand implements StackCommand {
     public double execute(Context context) {
         return _number;
     }
+
+    public String toString() {
+        return "Number(" + _number + ")";
+    }
 }
