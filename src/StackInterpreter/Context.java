@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class Context {
-    private Stack<Double> _stack = new Stack<>();
-    private HashMap<String, Double> _parameters = new HashMap<>();
+    private final Stack<Double> _stack = new Stack<>();
+    private final HashMap<String, Double> _parameters = new HashMap<>();
 
     public double stackPop() {
         if (_stack.isEmpty())

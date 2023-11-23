@@ -5,7 +5,7 @@ import StackInterpreter.Exeptions.WrongArgumentsCountException;
 import java.util.LinkedList;
 
 public class PushCommand implements StackCommand {
-    private StackCommand _operand;
+    private final StackCommand _operand;
 
     public PushCommand(LinkedList<StackCommand> operands) {
         if (operands.size() != 1) {
@@ -18,5 +18,9 @@ public class PushCommand implements StackCommand {
     @Override
     public double execute(Context context) {
         return context.stackPush(_operand.execute(context));
+    }
+
+    public String toString() {
+        return String.format("PUSH(%s)", _operand.toString());
     }
 }

@@ -7,4 +7,8 @@ public class PopCommand implements StackCommand {
     public double execute(Context context) {
         return context.stackPop();
     }
+
+    public String toString() {
+        return "POP";
+    }
 }

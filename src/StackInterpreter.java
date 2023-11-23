@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import StackInterpreter.*;
 
 public class StackInterpreter {
-    private Context _context;
-    private LinkedList<StackCommand> _commands = new LinkedList<>();
+    private final Context _context;
+    private final LinkedList<StackCommand> _commands = new LinkedList<>();
 
     public StackInterpreter() {
         _context = new Context();
@@ -19,7 +19,7 @@ public class StackInterpreter {
     public void interpret(InputStreamReader commandStream) throws IOException {
         BufferedReader commandReader = new BufferedReader(commandStream);
         String command = commandReader.readLine();
-        boolean isEnded = false;
+        boolean isEnded;
         while (command != null) {
             command = removeComments(command);
 
@@ -41,8 +41,12 @@ public class StackInterpreter {
             args.clear();
         }
 
-        for (StackCommand execute_command: _commands) {
-            execute_command.execute(_context);
+        executeCommands();
+    }
+
+    private void executeCommands() {
+        for (StackCommand command: _commands) {
+            command.execute(_context);
         }
     }
 

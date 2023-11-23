@@ -9,4 +9,8 @@ public class PrintCommand implements StackCommand {
         System.out.println(buffer);
         return context.stackPush(buffer);
     }
+
+    public String toString() {
+        return "PRINT";
+    }
 }

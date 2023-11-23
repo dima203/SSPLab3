@@ -1,7 +1,7 @@
 package StackInterpreter;
 
 public class NumberCommand implements StackCommand {
-    private double _number;
+    private final double _number;
 
     public NumberCommand(double number) {
         _number = number;
@@ -13,6 +13,6 @@ public class NumberCommand implements StackCommand {
     }
 
     public String toString() {
-        return "Number(" + _number + ")";
+        return String.format("%f", _number);
     }
 }

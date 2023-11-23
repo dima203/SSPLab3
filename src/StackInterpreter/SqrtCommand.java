@@ -8,4 +8,8 @@ public class SqrtCommand implements StackCommand {
         double result = Math.sqrt(context.stackPop());
         return context.stackPush(result);
     }
+
+    public String toString() {
+        return "SQRT";
+    }
 }

@@ -5,8 +5,8 @@ import StackInterpreter.Exeptions.WrongArgumentsCountException;
 import java.util.LinkedList;
 
 public class DefineCommand implements StackCommand {
-    private ParameterCommand _operand1;
-    private StackCommand _operand2;
+    private final ParameterCommand _operand1;
+    private final StackCommand _operand2;
 
     public DefineCommand(LinkedList<StackCommand> operands) {
         if (operands.size() != 2) {
@@ -23,6 +23,6 @@ public class DefineCommand implements StackCommand {
     }
 
     public String toString() {
-        return "Define(" + _operand1.toString() + ", " + _operand2.toString() + ")";
+        return String.format("%s = %s", _operand1.toString(), _operand2.toString());
     }
 }

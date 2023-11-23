@@ -8,4 +8,8 @@ public class MinusCommand implements StackCommand {
         double result = context.stackPop() - context.stackPop();
         return context.stackPush(result);
     }
+
+    public String toString() {
+        return "-";
+    }
 }
