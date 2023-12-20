@@ -1,16 +1,24 @@
-DEFINE a 3 # Comment
+# Определение переменных
+DEFINE a 3
 DEFINE b 3
+
+# Произведение двух чисел
 PUSH a
 PUSH b
 *
 PRINT
+
+# Корень
 SQRT
 PRINT
 POP
+
 DEFINE a 2
+
 PUSH a
 PUSH b
 *
+
 DEFINE c POP
 PUSH c
 PRINT
